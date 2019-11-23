@@ -1,6 +1,8 @@
 import os
 import re
+from pprint import pprint
 
+from utils import get_tokens
 from pytrie import trie
 
 def index_input_files(inv_idx):
@@ -12,17 +14,19 @@ def index_input_files(inv_idx):
             
             with open(file_path, 'r') as f:
                 text = f.read()
-            words = [re.sub(r'[^a-z0-9]', '', word.lower()) for word in text.split(' ')]
             
-            for word in words:
-                inv_idx.insert(word, file)
-
+            tokens = get_tokens(text)
+            for i, para in enumerate(tokens, 0):
+                id = f'{file_path}_para_{i}'
+                for word in para:
+                    count = para[word]
+                    inv_idx.insert(word, id, count)
 
 if __name__ == '__main__':
     inv_idx = trie()
     index_input_files(inv_idx)
 
-    print(inv_idx.get_by_prefix('bird'))
+    print(inv_idx.get_by_prefix('lorem'))
 
     
 

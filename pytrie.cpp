@@ -29,7 +29,7 @@ int main()
 
     // insert words from arr to inv_idx
     for (string &word : arr)
-        inv_idx.insert(word, "doc_1");
+        inv_idx.insert(word, "doc_1", 1);
 
     // return words matching the prefix
     for (auto res : inv_idx.get_by_prefix("ba"))
