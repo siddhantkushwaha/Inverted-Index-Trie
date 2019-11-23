@@ -29,12 +29,12 @@ index a *.txt* or *.pdf* file
 
     curl -X POST -F 'file=@/path/to/file_1.txt' http://<ip_address>/index
 
-do a word search
+do a word search, returns a json object
 
     curl -X GET -d 'query=lorem' -G http://<ip_address>/word_search
 
 
-do a prefix search
+do a prefix search, returns a json object
 
     curl -X GET -d 'query=lorem' -G http://<ip_address>/prefix_search
 
