@@ -1,3 +1,4 @@
 input_files
+uploaded_files
 *.so
 **__pycache__
