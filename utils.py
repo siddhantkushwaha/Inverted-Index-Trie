@@ -1,6 +1,7 @@
 import os
 import re
 
+
 def get_tokens(text):
     tokens = []
     paras = text.split('\n\n')
@@ -14,5 +15,3 @@ def get_tokens(text):
             word_dic[word] = word_dic.get(word, 0) + 1
         tokens.append(word_dic)
     return tokens
-
-        
