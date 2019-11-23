@@ -8,7 +8,8 @@ The trie was implemented in **C++** and is used in Python via **pybind11**.
 
 ### How to run
 
-clone and open terminal in repository
+clone and open terminal in repository,
+
 create a virtual environment in *python3.6*
 
     python3 -m venv venv
