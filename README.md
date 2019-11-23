@@ -40,6 +40,6 @@ do a prefix search
 
 clear the index
 
-    curl -X GET http://<ip_address>:8000/clear
+    curl -X GET http://<ip_address>/clear
 
 These endpoints were also tested with [Postman](https://www.getpostman.com/). Therefore, alternatively, these endpoints can be called via [Postman](https://www.getpostman.com/) too.
