@@ -4,7 +4,7 @@ This project is an implementation of inverted index using a trie data-structure,
 
 The trie was implemented in **C++** and is used in Python via **pybind11**.
 
-*Test in python3.6 and gnu-gcc7.4.0*
+*Tested in python3.6 and gnu-gcc7.4.0*
 
 ### How to run
 
