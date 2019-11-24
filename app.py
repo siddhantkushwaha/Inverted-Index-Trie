@@ -50,7 +50,7 @@ def word_search():
 
     results = []
     if query is not None:
-        docs = inv_idx.search_word(query)
+        docs = inv_idx.search_word(query.lower())
         results = [(doc[0], doc[1], create_link(doc[0])) for doc in docs]
 
     print(results)
@@ -64,7 +64,7 @@ def prefix_search():
 
     results = []
     if query is not None:
-        res = inv_idx.get_by_prefix(query)
+        res = inv_idx.get_by_prefix(query.lower())
         for word, docs in res:
             results.append(
                 (word, [(doc[0], doc[1], create_link(doc[0])) for doc in docs]))
